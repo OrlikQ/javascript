@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = 10;
+        let info = data; // w typach prostych jak liczby, teskt mamy kkopiowanie wartości
+        console.log(data, info); // 10, 10
+        data = 33;
+        console.log(data, info); // 33, 10 - dwa oddzielne miejsca w pamięci z danymi
+
+        let obj = {
+            a: 10
+        };
+
+        let test = obj; // kiedy przypisujemy obiekt do zmiennej/stałej
+                        // to nie kopiujemy wartości tylko kopiujemy
+                        // referencję, czyli ten sam adres w pamięci
+                        // który będzie dostępny dla zmiennej test
+                        // inaczej mówiąc zmienne test i obj wskazują
+                        // na ten sam obiekt w pamięci!
+                        // to jest właśnie referencja
+
+        console.log(obj.a, test.a); // 10, 10
+        obj.a = 33;
+        console.log(obj.a, test.a); // 33, 33 to jest dowód że obie zmienne
+                                    // wwskazują na to samo miejsce w pamięci
+
+        
+        // typy proste są przekazywane przez wartość
+        // czyli są to ich kopie np liczby, string itd
+        function something(a, b) {
+            a = 80;
+            return a + b;
+        }
+
+        let someA = 23;
+        let someB = 40;
+        console.log(something(someA, someB));
+    </script>
+</body>
+</html>

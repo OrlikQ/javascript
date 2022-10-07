@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test1 () {
+            
+        }
+
+        let test2 = function() {
+            // funkcja anonimowa bo nie ma nazwy przypiana
+            // do zmiennej test2
+        }
+
+        test2(); 
+
+        // definicja funkcji z callbackiem jako argument
+        function test3(a, callback) {
+            console.log(a);
+            calback(a);
+        }
+
+        function test4(arg) {
+            console.log("test4 arg:", arg);
+        }
+
+        test3(12, test4);
+        // test3: 12
+        // test4 arg: 12
+    </script>
+    
+</body>
+</html>

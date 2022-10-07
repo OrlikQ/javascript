@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calc {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            max-width: 450px;
+            text-algin: right;
+        }
+
+        .result{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+                                 
+    <div id="calc">
+        <label for="">Kapitał</label>
+        <input tupe="text" id="capital" value="1000">
+
+        <label for="">Oprocentowanie</label> <imput type="text" id="rate">
+        <input type="text" id="rate" value="0.04"> 
+
+        <label for="">Kapitalizacja co ile miesięcy:</label>
+        <input tupe="text" id="n" value="12">
+
+        <label for="">Na ile lat lokata:</label>
+        <input tupe="text" id="num-years" value="5">
+
+        <label for="" class="result">Wartość końcowa:</label>
+        <input tupe="text" id="num-years" value="5">
+    </div>
+
+    <script>
+        // capital * MAth.pow (1 +(0.4/12)) , (12 * 5) )
+
+        const inputCapital = dokument.getElementById("capital");
+        const inputRate = dokument.getElementById("rate");
+        const inputN = dokument.getElementById("n");
+        const inputYears = dokument.getElementById("num-years");
+
+        let capital = 1000;
+        let rate = 0.4;
+        let n = 12; // co ile kapitalizacja, 12 co rok
+        let t = 5; // na ile lat lokata
+        let finalMoney = capital * Math.pow( (1 + (rate/n)), n * t );
+        console.log( MMath.ceil(finalMoney) );
+    </script>
+</body>
+</html>

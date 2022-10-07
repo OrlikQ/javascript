@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String - inaczej zwany jest jako literały znakowe
+        // lub literały łańcuchowe
+        // to ciąg znaków UTF-16
+
+        const s1 = 'To jest teskt';
+        const s2 = "To też teskt";
+
+        const num = 78;
+        // literał szablou
+        
+        console.log( "Teskt" .length ); // 5 znaków
+        console.log( "".length ); // 0 znaków
+
+        console.log( "Teskt"[2] ); // k - po indeksie pobierzemy znak
+        console.log( s3[ s3.length -1] ); // 6
+        console.log( s3.charAt(15) ); // r
+
+        console.log( s3.charCodeAt(15) ); // 114
+
+        // wyszukiwanie słów w tekście
+        let simpleText = "Ala ma kota, a Ania ma psa"
+        let pos = simpleText.indexOf("Ania");
+        console.log(pos); // Ania jest pod 15 indeksem
+
+        pos = simpleText.lastIndexOf("ma"); // wyszukiwanie do końca
+        console.log(pos); // 20
+
+        // drugi argument do którego miejsca ma być wyszukiwanie
+        pos = simpleText.lastIndexOf("ma", 6); // 20
+        console.log(pos); // 20
+
+        pos = simpleText.lastIndexOf("ma", 10);
+        console.log(pos); // 4
+
+        // trim() - wycina białe znaki z początku i końca lańcucha
+        console.log("   Teskt   coś tam  ".trim() );
+
+        // toUpperCase()
+        console.log( "ala".toUpperCase() ); // ALA
+        // toLowerCase()
+        console.log( "AUTO".toLocaleLowerCase() ); // auto
+
+        // łączenie łańcuchów znaków
+        const str1 = "something"
+        const resultStr = "text";
+
+
+    </script>
+</body>
+</html>
